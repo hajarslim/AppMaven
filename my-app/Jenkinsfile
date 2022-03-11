@@ -3,7 +3,8 @@ pipeline {
   stages { 
     stage ('Clean') {
       steps {
-        sh 'mvn clean --file pom.xml' 
+        sh 'cd /my-app'
+        sh 'mvn clean' 
       } 
     } 
     stage ('Test') { 
