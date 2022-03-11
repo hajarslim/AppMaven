@@ -2,21 +2,18 @@ pipeline {
   agent any
   stages { 
     stage ('Clean') {
-      steps { 
-        sh 'cd my-app'
+      steps {
         sh 'mvn clean' 
       } 
     } 
     stage ('Test') { 
-      steps { 
-        sh 'cd my-app'
+      steps {
         sh 'mvn test' 
       } 
     
     } 
     stage('Package') { 
-      steps { 
-        sh 'cd my-app'
+      steps {
         sh 'mvn package' 
        }
     }
