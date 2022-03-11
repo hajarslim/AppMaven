@@ -1,6 +1,5 @@
 pipeline {
   agent any
-  dir("my-app"){
     stages { 
      stage ('Clean') {
        steps {
@@ -19,6 +18,6 @@ pipeline {
          sh 'mvn package' 
         }
      }
-     }
+     
    }
  }
